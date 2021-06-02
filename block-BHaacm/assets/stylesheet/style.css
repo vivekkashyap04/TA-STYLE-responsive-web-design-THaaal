@@ -135,20 +135,23 @@ table {
   margin: 0;
   padding: 0;
 }
-*root {
+:root {
   --primary: #222946;
   --secondary: #53b667;
+  --text: #a1a2a4;
+}
+html {
+  font-size: 16px;
 }
 body {
   line-height: 1.5;
-  font-size: 16px;
   font-family: "Work Sans", sans-serif;
 }
 .container {
   max-width: 1140px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 2rem;
 }
 .flex {
   display: flex;
@@ -167,47 +170,55 @@ body {
   width: 100%;
 }
 .padding {
-  padding: 40px 0;
+  padding: 2.5rem 0;
 }
 a {
   text-decoration: none;
 }
+.font-0 {
+  font-size: 0;
+}
 .btn {
-  background-color: #53b667;
+  background-color: var(--secondary);
   color: white;
-  padding: 8px 15px;
-  margin-top: 10px;
-  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  border-radius: 0.3rem;
   display: inline-block;
+}
+.btn:hover {
+  opacity: 0.8;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  color: #fff !important;
 }
 .header,
 footer {
-  background-color: #222946;
-  padding: 10px 0;
+  background-color: var(--primary);
+  padding: 0.6rem 0;
 }
 .logo {
   width: 100px;
   height: 50px;
-  padding: 10px 0;
+  padding: 0.6rem 0;
 }
 ul li {
-  margin-left: 22px;
+  margin-left: 1.5rem;
 }
 .header a {
   color: white;
   text-transform: uppercase;
 }
 h1 {
-  font-size: 25px;
+  font-size: 1.8rem;
   font-weight: 600;
 }
 .para-text {
-  color: #a1a2a4;
-  font-size: 14px;
+  color: var(--text);
+  font-size: 1rem;
   padding: 10px 0;
 }
 nav .active {
-  color: #53b667;
+  color: var(--secondary);
 }
 /* section1 */
 .section1 {
@@ -215,26 +226,34 @@ nav .active {
 }
 .gallery-text {
   text-align: center;
-  font-size: 30px;
+  font-size: 2rem;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 0.6rem;
 }
 .text {
-  font-size: 22px;
+  font-size: 1.4rem;
   font-family: 600;
+  padding: 0.6rem 0;
 }
 .btn-1 {
-  padding: 5px 15px;
+  padding: 0.3rem 1rem;
 }
+.blog img {
+  max-height: 200px;
+}
+/*footer */
 .footer {
-  color: #a1a2a4;
-  font-size: 20px;
+  color: var(--text);
+  font-size: 1.4rem;
 }
 footer i {
-  margin-left: 12px;
+  margin-left: 0.7rem;
 }
 /* media */
 @media screen and (max-width: 768px) {
+  html {
+    font-size: 10px;
+  }
   .column {
     flex-direction: column;
   }
@@ -245,8 +264,7 @@ footer i {
     flex: 1 0 100%;
     margin-bottom: 20px;
   }
-
-  .logo {
-    align-self: center;
+  .order-1 {
+    order: 1;
   }
 }
