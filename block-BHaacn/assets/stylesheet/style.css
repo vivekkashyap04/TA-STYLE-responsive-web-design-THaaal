@@ -229,13 +229,14 @@ a {
   font-weight: 500;
   padding: 1rem 0;
 }
-#toggle {
+#toggle,
+.bars {
   display: none;
 }
 /* header */
 .header {
   background-image: url("../media/banner.png"),
-    linear-gradient(rgba(59, 69, 170, 0.2), rgba(59, 69, 170, 0.2));
+    linear-gradient(rgba(35, 52, 123, 0.7), rgba(35, 52, 123, 0.7));
   background-size: cover;
   padding: 1rem 0;
 }
@@ -250,7 +251,8 @@ h1 {
 .header a {
   text-transform: uppercase;
 }
-.brand {
+.brand,
+.logo {
   width: 100px;
   height: 40px;
 }
@@ -260,6 +262,9 @@ header .btn-1 {
 }
 .w-color {
   color: white;
+}
+.text-year {
+  color: var(--secondary);
 }
 /* section 1 */
 .section1 img {
@@ -399,6 +404,7 @@ header .btn-1 {
   .bars {
     font-size: 28px;
     position: fixed;
+    display: inline-block;
     z-index: 99;
     right: 32px;
     top: 16px;
